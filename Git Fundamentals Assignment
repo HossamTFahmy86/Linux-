@@ -1,0 +1,88 @@
+Part 1: Git Basics :
+1- What command initializes a new Git repository in an existing directory?
+* git init 
+
+2- Describe the difference between a tracked and an untracked file.
+* Tracked file : 
+Tracked files are files that were in the last snapshot; they can be unmodified, modified, or staged.
+* untracked file : 
+Untracked files is any files in your working directory that were not in your last snapshot and are not in your staging area.
+
+3- What is the purpose of a Git branch? Give a real-world example of when you would use one
+* git branch is a pointer to a snapshot of your changes.
+
+4- After making changes to files, what two commands are typically run before the changes are reflected in the repository?
+* git add
+* git commit
+
+5- What is the default name of the main branch when a repository is created?
+* Main
+
+______________________________________________________________________________________________________________________________
+Part 2: Git File States :
+1- Define the following Git file states:
+* Working directory :This is the local directory on your computer where your project files reside, It contains the current version of your project files that you are actively modifying. 
+* Staged/index :Also known as the staging area, this is an intermediate area where you prepare changes for your next commit.
+* Committed :This state refers to changes that have been permanently recorded in the Git repository's history.
+* Ignored :These are files or directories that Git is configured to disregard and not track, They are typically specified in a "gitignore" file and include temporary files.
+* Stashed :This state represents temporary storage for uncommitted changes in your working directory and staging area.
+
+2- What command do you use to temporarily save changes that you don't want to commit yet?
+* "git stash"
+
+3- How do you check which files are currently staged for commit?
+* "git status"
+
+4- Q9. What file is used to specify ignored files in a repository?
+* "gitignore"
+
+5- What happens to your working directory when you run git stash?
+* Use git stash when you want to record the current state of the working directory, but want to go back to a clean working directory.
+
+___________________________________________________________________________________________________________________________________
+Part 3: Commit History :
+1- What command shows the complete commit history in reverse chronological order?
+* "git.log"
+
+2- How do you view a compact summary of the commit history with a graphical representation of branches?
+* "git log --oneline --graph --all"
+
+3- How can you see what files were changed in a specific commit? 
+* "git show <commit-hash>"
+
+4- What command allows you to show the difference between the current state and the last commit?
+* "git.diff"
+
+5- How can you undo your last commit without losing the changes in your working directory?
+* "git reset --soft" to keep your changes staged, or "git reset --mixed" to keep them in your working.
+
+___________________________________________________________________________________________________________________________________
+Part 4: Git Merge Type :
+1- What is the difference between a fast-forward and a non-fast-forward merge?
+* Fast-Forward Merge: Moves the branch pointer forward without creating a new commit. Suitable for simple, linear histories.
+* No-Fast-Forward Merge: Creates a merge commit even when a fast-forward is possible, preserving the branching history and providing a clear indication of when branches were merged
+
+2- Q17. What type of merge would you use to combine all changes from a feature branch into a single commit?
+* "squash merge"
+
+3- What is the command to create a non-fast-forward merge?
+* 
+
+4- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
