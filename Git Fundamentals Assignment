@@ -1,4 +1,4 @@
-Part 1: Git Basics :
+Part 1:Git Basics :
 1- What command initializes a new Git repository in an existing directory?
 * git init 
 
@@ -6,7 +6,7 @@ Part 1: Git Basics :
 * Tracked file : 
 Tracked files are files that were in the last snapshot; they can be unmodified, modified, or staged.
 * untracked file : 
-Untracked files is any files in your working directory that were not in your last snapshot and are not in your staging area.
+Untracked files are any files in your working directory that were not in your last snapshot and are not in your staging area.
 
 3- What is the purpose of a Git branch? Give a real-world example of when you would use one
 * git branch is a pointer to a snapshot of your changes.
@@ -19,13 +19,13 @@ Untracked files is any files in your working directory that were not in your las
 * Main
 
 ______________________________________________________________________________________________________________________________
-Part 2: Git File States :
+Part 2:Git File States :
 1- Define the following Git file states:
-* Working directory :This is the local directory on your computer where your project files reside, It contains the current version of your project files that you are actively modifying. 
-* Staged/index :Also known as the staging area, this is an intermediate area where you prepare changes for your next commit.
-* Committed :This state refers to changes that have been permanently recorded in the Git repository's history.
-* Ignored :These are files or directories that Git is configured to disregard and not track, They are typically specified in a "gitignore" file and include temporary files.
-* Stashed :This state represents temporary storage for uncommitted changes in your working directory and staging area.
+* Working directory: This is the local directory on your computer where your project files reside. It contains the current version of your project files that you are actively modifying. 
+* Staged/index: Also known as the staging area, this is an intermediate area where you prepare changes for your next commit.
+* Committed: This state refers to changes that have been permanently recorded in the Git repository's history.
+* Ignored: These are files or directories that Git is configured to disregard and not track. They are typically specified in a "gitignore" file and include temporary files.
+* Stashed: This state represents temporary storage for uncommitted changes in your working directory and staging area.
 
 2- What command do you use to temporarily save changes that you don't want to commit yet?
 * "git stash"
@@ -40,7 +40,7 @@ Part 2: Git File States :
 * Use git stash when you want to record the current state of the working directory, but want to go back to a clean working directory.
 
 ___________________________________________________________________________________________________________________________________
-Part 3: Commit History :
+Part 3:Commit History :
 1- What command shows the complete commit history in reverse chronological order?
 * "git.log"
 
@@ -51,13 +51,13 @@ Part 3: Commit History :
 * "git show <commit-hash>"
 
 4- What command allows you to show the difference between the current state and the last commit?
-* "git.diff"
+* "git diff"
 
 5- How can you undo your last commit without losing the changes in your working directory?
-* "git reset --soft" to keep your changes staged, or "git reset --mixed" to keep them in your working.
+* "git reset -- soft" to keep your changes staged, or "git reset -- mixed" to keep them in your working.
 
 ___________________________________________________________________________________________________________________________________
-Part 4: Git Merge Type :
+Part 4:Git Merge Type :
 1- What is the difference between a fast-forward and a non-fast-forward merge?
 * Fast-Forward Merge: Moves the branch pointer forward without creating a new commit. Suitable for simple, linear histories.
 * No-Fast-Forward Merge: Creates a merge commit even when a fast-forward is possible, preserving the branching history and providing a clear indication of when branches were merged
@@ -68,7 +68,34 @@ Part 4: Git Merge Type :
 3- What is the command to create a non-fast-forward merge?
 * 
 
-4- 
+4- Why might someone prefer a rebase over a merge in collaborative environments?
+* "git.rebase" It relies on writing the record by applying commitments from one branch to another, creating a linear record.
+* "git.merge" creates a new commit to combine histories, preserving the original branch structure.
+
+5- Explain the purpose of git merge -- squash. What does it do to commit history?
+* git merge -- squash is a command that combines multiple commits from one branch into a single commit on another branch,
+  discarding the individual commit history of the squashed branch.
+
+________________________________________________________________________________________________________________________________________
+Part 5:Cherry-Pick :
+
+1- What does the git cherry-pick command do?
+* This Command enables arbitrary Git commits to be picked by reference and appended to the current working HEAD.
+
+2- Provide a command that cherry-picks the commit with hash abc1234.
+* 
+
+3- In what situation would git cherry-pick be preferred over git merge?
+* We can use it to undo changes. For example, say a commit is accidentally made to the wrong branch,
+  You can switch to the correct branch and cherry-pick the commit to where it should belong.
+
+4- What happens if you cherry-pick a commit that conflicts with changes in your current branch?
+*
+
+5- How do you abort a cherry-pick operation that encountered a conflict?
+* If you encounter any issues or want to abort the cherry-pick, 
+   you can use the "git cherry-pick -- abort" command to cancel the operation and restore the branch to its original state.
+
 
 
 
